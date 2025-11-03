@@ -1,0 +1,250 @@
+/* =================================
+   1. DEFINISI VARIABEL (Tema)
+   ================================= */
+:root {
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --radius-md: 8px;
+
+  /* Palet Warna */
+  --c-bg: #f8f9fa;
+  --c-bg-light: #ffffff;
+  --c-border: #e5e7eb;
+  
+  --c-text-primary: #1f2937;
+  --c-text-secondary: #6b7280;
+  
+  --c-primary: #3b82f6;
+  --c-primary-hover: #2563eb;
+  
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.03), 0 10px 20px rgba(0,0,0,0.07);
+}
+
+/* =================================
+   2. RESET & BODY
+   ================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  /* Penting untuk JavaScript nanti! */
+  scroll-behavior: smooth; 
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--c-bg);
+  color: var(--c-text-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+.bg-light {
+  background-color: var(--c-bg-light);
+  border-top: 1px solid var(--c-border);
+  border-bottom: 1px solid var(--c-border);
+}
+
+h1, h2, h3 {
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--c-text-primary);
+}
+
+h2 {
+  font-size: 2.25rem;
+  color: var(--c-text-primary);
+  text-align: center;
+}
+
+p {
+  margin-bottom: 1rem;
+  max-width: 60ch; /* Batasi lebar paragraf agar mudah dibaca */
+}
+
+/* =================================
+   3. HEADER & NAVIGASI
+   ================================= */
+header {
+  background-color: var(--c-bg-light);
+  border-bottom: 1px solid var(--c-border);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--c-text-primary);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--c-text-secondary);
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: var(--c-primary);
+}
+
+/* =================================
+   4. BAGIAN UTAMA (Hero, Proyek)
+   ================================= */
+.hero {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.hero-subjudul {
+  font-size: 1.25rem;
+  color: var(--c-text-secondary);
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+}
+
+.tombol-utama {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  background-color: var(--c-primary);
+  color: white;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.tombol-utama:hover {
+  background-color: var(--c-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.2);
+}
+
+#tentang-saya .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.grid-proyek {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.kartu-proyek {
+  background-color: var(--c-bg-light);
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.kartu-proyek:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.kartu-proyek h3 {
+  font-size: 1.25rem;
+  color: var(--c-primary);
+}
+
+.kartu-proyek a {
+  text-decoration: none;
+  color: var(--c-primary);
+  font-weight: 600;
+}
+
+.kartu-proyek a:hover {
+  text-decoration: underline;
+}
+
+/* =================================
+   5. FORMULIR KONTAK & FOOTER
+   ================================= */
+#kontak .container {
+  max-width: 600px;
+  text-align: center;
+}
+
+.form-kontak {
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.form-grup {
+  margin-bottom: 1.25rem;
+}
+
+.form-grup label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-grup input,
+.form-grup textarea {
+  width: 100%;
+  font-family: var(--font-family);
+  font-size: 1rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--c-border);
+  border-radius: var(--radius-md);
+}
+
+.form-grup input:focus,
+.form-grup textarea:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+.form-kontak button[type="submit"] {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--c-text-secondary);
+  font-size: 0.9rem;
+}
