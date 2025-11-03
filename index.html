@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil [Nama Anda]</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-logo">[Nama Anda]</div>
+                <ul class="nav-links">
+                    <li><a href="#tentang-saya">Tentang Saya</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Halo, saya [Nama Anda]</h1>
+                <p class="hero-subjudul">[Jabatan Anda, misal: Web Developer & Kreator]</p>
+                <a href="#kontak" class="tombol-utama">Hubungi Saya</a>
+            </div>
+        </section>
+
+        <section id="tentang-saya" class="bg-light">
+            <div class="container">
+                <h2>Tentang Saya</h2>
+                <p>
+                    Tulis paragraf singkat di sini tentang diri Anda. Apa keahlian Anda? 
+                    Apa yang Anda sukai? Ini adalah tempat untuk menceritakan kisah profesional 
+                    Anda secara ringkas dan menarik.
+                </p>
+            </div>
+        </section>
+
+        <section id="proyek">
+            <div class="container">
+                <h2>Proyek & Pengalaman</h2>
+                <div class="grid-proyek">
+                    
+                    <div class="kartu-proyek">
+                        <h3>Aplikasi Catatan Harian (dengan AI)</h3>
+                        <p>Sebuah aplikasi web yang dibuat dengan HTML, CSS, dan JavaScript murni, 
+                           terhubung ke Google AI Studio API secara aman menggunakan Netlify Functions 
+                           untuk meringkas dan menganalisis mood.</p>
+                        <a href="#">Lihat di GitHub &rarr;</a>
+                    </div>
+                    
+                    <div class="kartu-proyek">
+                        <h3>Game Lompat Blok</h3>
+                        <p>Game platformer 2D sederhana yang dibuat dengan HTML, CSS Animations, 
+                           dan JavaScript. Mendemonstrasikan pemahaman tentang game loop dan 
+                           deteksi tabrakan (collision detection).</p>
+                        <a href="#">Lihat di GitHub &rarr;</a>
+                    </div>
+                    
+                    <div class="kartu-proyek">
+                        <h3>Judul Proyek Lain</h3>
+                        <p>Deskripsi singkat tentang proyek ini, teknologi yang digunakan, 
+                           dan apa yang Anda pelajari dari proyek tersebut.</p>
+                        <a href="#">Lihat di GitHub &rarr;</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="kontak" class="bg-light">
+            <div class="container">
+                <h2>Hubungi Saya</h2>
+                <p>Tertarik bekerja sama? Silakan kirim pesan di bawah ini.</p>
+                
+                <form name="kontak" class="form-kontak" data-netlify="true" method="POST">
+                    <div class="form-grup">
+                        <label for="nama">Nama Anda:</label>
+                        <input type="text" id="nama" name="nama" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="email">Email Anda:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="tombol-utama">Kirim Pesan</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 [Nama Anda]. Dibuat dengan ❤️</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
